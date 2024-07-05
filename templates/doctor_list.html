@@ -1,0 +1,38 @@
+<div class="form-group">
+    <label for="doctor_name">Doctor Name:</label>
+    <input type="text" name="doctor_name" id="doctor_name" class="form-control" placeholder="Search for Doctor">
+    <ul id="doctor-list"></ul>
+    <input type="hidden" name="doctor_id" id="doctor_id"> <!-- Hidden field to store selected doctor's ID -->
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('#doctor_name').keyup(function () {
+        var inputVal = $(this).val();
+        if (inputVal.length >= 2) {
+            $.ajax({
+                url: '/get_doctor_list/', // Replace with the URL to fetch doctor names
+                method: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    $('#doctor-list').empty();
+                    data.forEach(function (item) {
+                        if (item.toLowerCase().includes(inputVal.toLowerCase())) {
+                            $('#doctor-list').append('<li>' + item + '</li>');
+                        }
+                    });
+                    $('#doctor-list li').click(function () {
+                        var selectedDoctor = $(this).text();
+                        $('#doctor_name').val(selectedDoctor);
+                        $('#doctor-list').empty();
+                        $('#doctor_id').val(/* Fetch the ID of the selected doctor */);
+                    });
+                }
+            });
+        } else {
+            $('#doctor-list').empty();
+        }
+    });
+});
+</script>

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<head>
+  <style>
+    /* Add your custom CSS styles here */
+    .container {
+      width: 50%;
+      margin: auto;
+    }
+
+    .register-form {
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .form-content {
+      margin-top: 20px;
+    }
+
+    .note {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    /* Style form fields */
+    input[type='text'],
+    input[type='password'],
+    input[type='email'],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<br><br><br>
+<form method="post" enctype="admin_add_doctor">
+  {% csrf_token %}
+  <div class="container register-form p-3">
+    <div class="form">
+      <div class="note">
+        <p>Add New Doctor To Hospital</p>
+      </div>
+      <div class="form-content">
+        {{ form.as_p }}  <!-- Render form fields as paragraphs -->
+        <button type="submit" class="btnSubmit">Register</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+{% endblock body %}

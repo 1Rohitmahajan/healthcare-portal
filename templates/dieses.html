@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diseases and Side Effects</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles for improved appearance */
+        body {
+            padding-top: 50px;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .disease-card {
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .disease-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-text {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 5px 0;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="text-center my-4">Types of Diseases and Side Effects</h1>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="card disease-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cardiovascular Diseases</h5>
+                        <p class="card-text">Side Effects:</p>
+                        <ul class="card-text">
+                            <li>High blood pressure</li>
+                            <li>Heart attack</li>
+                            <li>Stroke</li>
+                            <li>Chest pain (Angina)</li>
+                            <li>Heart failure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card disease-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Respiratory Diseases</h5>
+                        <p class="card-text">Side Effects:</p>
+                        <ul class="card-text">
+                            <li>Asthma</li>
+                            <li>Chronic obstructive pulmonary disease (COPD)</li>
+                            <li>Pneumonia</li>
+                            <li>Shortness of breath</li>
+                            <li>Respiratory infections</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card disease-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Endocrine Disorders</h5>
+                        <p class="card-text">Side Effects:</p>
+                        <ul class="card-text">
+                            <li>Diabetes</li>
+                            <li>Thyroid disorders</li>
+                            <li>Adrenal insufficiency</li>
+                            <li>Pituitary disorders</li>
+                            <li>Obesity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card disease-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Gastrointestinal Diseases</h5>
+                        <p class="card-text">Side Effects:</p>
+                        <ul class="card-text">
+                            <li>Peptic ulcers</li>
+                            <li>GERD (Gastroesophageal reflux disease)</li>
+                            <li>IBD (Inflammatory bowel disease)</li>
+                            <li>Gallstones</li>
+                            <li>Constipation</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="card disease-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Neurological Diseases</h5>
+                        <p class="card-text">Side Effects:</p>
+                        <ul class="card-text">
+                            <li>Alzheimer's disease</li>
+                            <li>Parkinson's disease</li>
+                            <li>Epilepsy</li>
+                            <li>Migraine</li>
+                            <li>Multiple sclerosis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card disease-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Musculoskeletal Disorders</h5>
+                        <p class="card-text">Side Effects:</p>
+                        <ul class="card-text">
+                            <li>Osteoarthritis</li>
+                            <li>Rheumatoid arthritis</li>
+                            <li>Osteoporosis</li>
+                            <li>Fibromyalgia</li>
+                            <li>Back pain</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card disease-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Infectious Diseases</h5>
+                        <p class="card-text">Side Effects:</p>
+                        <ul class="card-text">
+                            <li>Flu</li>
+                            <li>HIV/AIDS</li>
+                            <li>Hepatitis</li>
+                            <li>Malaria</li>
+                            <li>Tuberculosis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card disease-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Skin Diseases</h5>
+                        <p class="card-text">Side Effects:</p>
+                        <ul class="card-text">
+                            <li>Eczema</li>
+                            <li>Psoriasis</li>
+                            <li>Acne</li>
+                            <li>Skin cancer</li>
+                            <li>Warts</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (required for some Bootstrap features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+{% endblock body %}

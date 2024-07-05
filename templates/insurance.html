@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <head>
+        <title> Health Insurance</title>
+        <style>
+            body {
+                background: radial-gradient(pink, orange);
+                /* display: flex; */
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                padding: 30px;
+                padding-top: 80px;
+                font-family: Arial, sans-serif;
+            }
+
+            .input-field {
+                display: flex;
+                width: 300px;
+                background-color: #fff;
+                border: 2px solid #000;
+                border-radius: 5px;
+                padding: 10px;
+                margin-left: 200px;
+
+                margin: 100px;
+            }
+
+            .input-field input {
+                width: calc(100% - 20px);
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+            }
+
+            .input-field button {
+                width: calc(100% - 20px);
+                padding: 8px;
+                border: none;
+                border-radius: 3px;
+                background-color: #007bff;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            .input-field button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="input-field ">
+        <form class="login-form" action="/insurance" method="post">
+            {% csrf_token %}
+            <input name="name" type="text" id="name" autocomplete="off" placeholder="Name">
+            <input name="email" id="email" type="text" class="validate" maxlength="60" id="txtEmail" autocomplete="off"
+                placeholder="Email">
+            <input name="phone" id="phone" type="tel" class="validate" maxlength="10" id="txtMobno" autocomplete="off"
+                placeholder="Mobile Number">
+            <input name="rate" id="rate" type="text" class="validate" maxlength="60" id="txtEmail" autocomplete="off"
+                placeholder="Rate">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+
+</html>
+{% endblock body %}

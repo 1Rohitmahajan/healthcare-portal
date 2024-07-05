@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Medicines for Different Health Conditions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .medicine-card {
+            margin-bottom: 20px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .medicine-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-text {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 5px 0;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="text-center my-4">Medicines for Different Health Conditions</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card medicine-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cardiovascular Medicines</h5>
+                        <p class="card-text">Common medicines:</p>
+                        <ul class="list-group">
+                            <li class="list-group-item">Aspirin</li>
+                            <li class="list-group-item">Statins</li>
+                            <li class="list-group-item">Beta-blockers</li>
+                            <li class="list-group-item">ACE inhibitors</li>
+                            <li class="list-group-item">Calcium channel blockers</li>
+                            <li class="list-group-item">Diuretics</li>
+                            <li class="list-group-item">Antiplatelet agents</li>
+                            <li class="list-group-item">Nitrates</li>
+                            <li class="list-group-item">Anticoagulants</li>
+                            <li class="list-group-item">Antiarrhythmic agents</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card medicine-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Respiratory Medicines</h5>
+                        <p class="card-text">Common medicines:</p>
+                        <ul class="list-group">
+                            <li class="list-group-item">Albuterol</li>
+                            <li class="list-group-item">Corticosteroids</li>
+                            <li class="list-group-item">Antihistamines</li>
+                            <li class="list-group-item">Bronchodilators</li>
+                            <li class="list-group-item">Mucolytics</li>
+                            <li class="list-group-item">Leukotriene modifiers</li>
+                            <li class="list-group-item">Anticholinergics</li>
+                            <li class="list-group-item">Inhaled corticosteroids</li>
+                            <li class="list-group-item">Antitussives</li>
+                            <li class="list-group-item">Expectorants</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card medicine-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Neurological Medicines</h5>
+                        <p class="card-text">Common medicines:</p>
+                        <ul class="list-group">
+                            <li class="list-group-item">Antidepressants</li>
+                            <li class="list-group-item">Anticonvulsants</li>
+                            <li class="list-group-item">Analgesics</li>
+                            <li class="list-group-item">Sedatives</li>
+                            <li class="list-group-item">Anxiolytics</li>
+                            <li class="list-group-item">Antipsychotics</li>
+                            <li class="list-group-item">Stimulants</li>
+                            <li class="list-group-item">Muscle relaxants</li>
+                            <li class="list-group-item">Nootropics</li>
+                            <li class="list-group-item">Antiparkinsonian agents</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card medicine-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Gastrointestinal Medicines</h5>
+                        <p class="card-text">Common medicines:</p>
+                        <ul class="list-group">
+                            <li class="list-group-item">Proton Pump Inhibitors</li>
+                            <li class="list-group-item">Antacids</li>
+                            <li class="list-group-item">Antiemetics</li>
+                            <li class="list-group-item">Laxatives</li>
+                            <li class="list-group-item">Antidiarrheal agents</li>
+                            <li class="list-group-item">Digestive enzymes</li>
+                            <li class="list-group-item">Prokinetic agents</li>
+                            <li class="list-group-item">H2 blockers</li>
+                            <li class="list-group-item">Bulk-forming agents</li>
+                            <li class="list-group-item">Anti-inflammatory agents</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+{% endblock body %}
