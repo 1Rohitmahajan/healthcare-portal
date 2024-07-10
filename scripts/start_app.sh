@@ -1,6 +1,6 @@
 #!/usr/bin/bash 
 
-sed -i 's/\[]/\["54.157.28.96"]/' /home/ubuntu/healthcare-portal-main/healthportal/settings.py
+sed -i 's/\[]/\["54.157.28.96"]/' /home/ubuntu/healthcare-portal/healthportal/settings.py
 
 python manage.py migrate 
 python manage.py makemigrations     

@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files: 
   - source: /
-    destination: /home/ubuntu/healthcare-portal-main
+    destination: /home/ubuntu/healthcare-portal
 permissions:
-  - object: /home/ubuntu/healthcare-portal-main
+  - object: /home/ubuntu/healthcare-portal
     owner: ubuntu
     group: ubuntu
 hooks:

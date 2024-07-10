@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/home/ubuntu/healthcare-portal-main
-ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/healthcare-portal-main/healthportal/healthportal.sock healthportal.wsgi:application
+WorkingDirectory=/home/ubuntu/healthcare-portal
+ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/healthcare-portal/healthportal/healthportal.sock healthportal.wsgi:application
 
        
 [Install]
